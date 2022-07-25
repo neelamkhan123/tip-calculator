@@ -27,6 +27,8 @@ h1 {
 }
 
 .container {
+  position: relative;
+  right: 20px;
   height: 400px;
   width: 590px;
   display: grid;
