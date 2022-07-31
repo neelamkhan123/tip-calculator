@@ -9,12 +9,6 @@ body {
   font-size: 1.5rem;
 }
 
-h1 {
-  text-align: center;
-  font-size: 4rem;
-  padding: 6rem 0;
-}
-
 .sub-heading {
   font-size: 1rem;
   font-weight: bold;
@@ -26,74 +20,148 @@ h1 {
   font-family: monospace;
 }
 
-.container {
+#main {
   position: relative;
-  right: 20px;
-  height: 400px;
-  width: 590px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  margin: 0 30rem;
 
-  .inputs {
-    border-right: #333 solid 1px;
-
-    button {
-      height: 30px;
-      width: 30px;
-      border-radius: 5px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #ddd;
-        border: none;
-      }
-    }
-
-    .bill {
-      input {
-        display: block;
-        width: 15.6rem;
-        margin-bottom: 1rem;
-        height: 30px;
-        border-radius: 5px;
-      }
-    }
-
-    .tip-percentage {
-      margin-bottom: 1rem;
-    }
-  }
-
-  .results {
+  .header {
     display: flex;
-    flex-direction: column;
-    align-items: space-around;
-    padding-left: 2rem;
-
-    div {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 1rem;
-    }
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 2.2rem;
   }
 
-  .btn {
-    display: grid;
-    grid-column: span 2;
+  .primary-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .submit-btn {
-      font-family: monospace;
-      height: 40px;
-      border-radius: 5px;
-      font-size: 1.5rem;
+    .container {
+      height: 500px;
+      width: 600px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
 
-      &:hover {
-        background-color: #ddd;
-        border: none;
-        cursor: pointer;
+      .inputs {
+        border-right: #333 solid 1px;
+
+        button {
+          height: 30px;
+          width: 30px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #ddd;
+            border: none;
+          }
+        }
+
+        .bill {
+          input {
+            display: block;
+            width: 15.6rem;
+            margin-bottom: 1rem;
+            height: 30px;
+            border-radius: 5px;
+          }
+        }
+
+        .tip-percentage {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .results {
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        padding-left: 2rem;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .btn {
+        display: grid;
+        grid-column: span 2;
+
+        .submit-btn {
+          font-family: monospace;
+          height: 40px;
+          border-radius: 5px;
+          font-size: 1.5rem;
+
+          &:hover {
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+//Mobile
+@media (max-width: 400px) and (max-height: 850px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #input-field {
+    font-size: 1rem;
+  }
+
+  #main {
+    .header {
+      font-size: 1rem;
+    }
+
+    .primary-section {
+      .container {
+        height: 500px;
+        width: 200px;
+
+        .inputs {
+          button {
+            height: 20px;
+            width: 20px;
+
+            .fa-solid {
+              font-size: 0.8rem;
+            }
+          }
+
+          .bill {
+            input {
+              width: 12rem;
+              height: 20px;
+              margin-right: 1rem;
+            }
+          }
+        }
+
+        .btn {
+          .submit-btn {
+            font-size: 1.1rem;
+          }
+        }
+
+        .results {
+          padding-left: 1rem;
+
+          div {
+            width: 6rem;
+          }
+        }
       }
     }
   }

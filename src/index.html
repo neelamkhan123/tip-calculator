@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tip Calculator</title>
     <script defer src="./script.js"></script>
-    <link rel="shortcut image" type="image/png" href="./img/favicon.png" />
     <script
       src="https://kit.fontawesome.com/88eeb91d4d.js"
       crossorigin="anonymous"
@@ -14,60 +13,63 @@
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
-    <header>
-      <h1>tip calculator</h1>
-    </header>
-    <div class="container">
-      <section class="inputs">
-        <div class="bill">
-          <label for="bill">bill</label>
-          <input type="text" id="input-field" />
-        </div>
-
-        <div class="tip-percentage">
-          <label for="tip-percentage">tip %</label>
-          <div>
-            <button class="plus-btn-1">
-              <i class="fa-solid fa-plus"></i>
-            </button>
-            <span class="tip-percentage-value">15</span>
-            <button class="minus-btn-1">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="split">
-          <label for="split">split between...</label>
-          <div>
-            <button class="plus-btn-2"><i class="fa-solid fa-plus"></i></button>
-            <span class="split-value">01</span>
-            <button class="minus-btn-2">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="results">
-        <div>
-          <p>tip</p>
-          <p class="tip">0.00</p>
-        </div>
-
-        <div>
-          <p>total</p>
-          <p class="total">0.00</p>
-        </div>
-      </section>
-
-      <div class="btn">
-        <button class="submit-btn">submit</button>
+    <main id="main">
+      <div class="header">
+        <h1>tip calculator</h1>
       </div>
-    </div>
 
-    <!-- <div class="split-between">
-      <p class="sub-heading">per person</p>
-    </div> -->
+      <section class="primary-section">
+        <div class="container">
+          <section class="inputs">
+            <div class="bill">
+              <label for="bill">bill</label>
+              <input type="text" id="input-field" />
+            </div>
+
+            <div class="tip-percentage">
+              <label for="tip-percentage">tip %</label>
+              <div>
+                <button class="plus-btn-1">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <span class="tip-percentage-value">15</span>
+                <button class="minus-btn-1">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="split">
+              <label for="split">split between...</label>
+              <div>
+                <button class="plus-btn-2">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <span class="split-value">01</span>
+                <button class="minus-btn-2">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="results">
+            <div>
+              <p>tip</p>
+              <p class="tip">0.00</p>
+            </div>
+
+            <div>
+              <p>total</p>
+              <p class="total">0.00</p>
+            </div>
+          </section>
+
+          <div class="btn">
+            <button class="submit-btn">submit</button>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
